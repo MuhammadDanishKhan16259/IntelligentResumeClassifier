@@ -1,0 +1,29 @@
+<head>
+	<link rel="stylesheet" href="/style.css">
+
+
+        <title>Upload a CV</title>
+    </head>
+    <div class="bg-image"></div>
+    <div class="topNav">
+        <img src="/static/logo-solo.png" style="width: 50px; height: 50px; float: left; margin-left: 30px;"> 
+        <p style="float: left; color: white; font-family: Arial, Helvetica, sans-serif; margin-left: 10px;"><b>Intelligent Resume Classifier</b></p>
+         <a href="/logout" style="height: auto; padding: none; float: right"
+      >logout</a
+    > 
+        <p style="float: right; color: white;"> {{username}}</p>
+       </div>
+    <div class="content-item">
+        <h1 style="color: black">Upload a CV</h1>
+        <form method=post action="/file" enctype=multipart/form-data>
+		<select id="dept" name="dept">
+            <option value="" disabled selected>Choose relevant Dept:</option>	
+				<option value= "HR" > Human Resources </option>
+				<option value= "AD" > Admin </option>
+				<option value= "FIN" > Finances </option>
+				<option value= "DEV" > Development </option>
+				<option value= "IT" > IT </option>
+          <input type=file name="file[]" multiple="">
+          <input type=submit value=Upload>
+        </form>
+    </div>
